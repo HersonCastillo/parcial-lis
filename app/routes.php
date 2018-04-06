@@ -11,12 +11,25 @@
 |
 */
 /*********************************** Ruta raiz **********************************************************/
-Route::get('home', function()
+Route::get('login', function()
 {
 
 	return View::make('inicio');
 });
 
-Route::post('calcular', array('uses' => 'CalculoController@calcular'));
+Route::get('inicioProductos', function()
+{
 
+	return View::make('iniProduc');
+});
+Route::get('verProductos', function()
+{
+
+	return View::make('verProduc');
+});
+Route::get('modificarProductos', function()
+{
+
+	return View::make('modProduc');
+});
 ?>
