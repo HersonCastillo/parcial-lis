@@ -83,16 +83,8 @@ Route::filter('guest', function()
 
 Route::filter('csrf', function()
 {
-	if (Session::token() !== Input::get('_token'))
+	if (Session::token() != Input::get('_token'))
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
-});
-
-Route::filter('seguridad', function(){
-
-	if(Session::has('logueado') != true){
-		return Redirect::to('/')->with('sr', 'Sesión Requerida');
-	}
-
 });
