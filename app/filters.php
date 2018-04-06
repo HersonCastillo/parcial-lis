@@ -89,10 +89,10 @@ Route::filter('csrf', function()
 	}
 });
 
-Route::filter('seguridad', function(){
+Route::filter('secure', function(){
 
-	if(Session::has('logueado') != true){
-		return Redirect::to('/')->with('sr', 'Sesión Requerida');
+	if(Session::has('loggin') != true){
+		return Redirect::to('/')->with('msj', 'Sesión Requerida');
 	}
 
 });

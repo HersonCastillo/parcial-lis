@@ -27,6 +27,29 @@
 	</form>
 @stop
 
+@section('code')
+	<script>
+		$(document).ready(function(){
+			$("#Enviar").click(function(){
+				var 
+					Nombre = $('#name').val(),
+					Descripcion = $("#desc").val(),
+					Precio = $('#price').val();
+				
+				$.ajax({url: 'product/new', data: {
+					nombre: Nombre,
+					descripcion: Descripcion,
+					precio: Precio
+				}, type: 'post', success: function(response){
+					if(response.status == "ok") alert(response.message)
+					else if(response.status == "error") alert(response.message)
+					window.location.reload()
+				}})
+			})
+		})
+	</script>
+@stop
+
 @section('footer')
 	@parent
 @stop

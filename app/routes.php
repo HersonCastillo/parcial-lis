@@ -13,23 +13,26 @@
 /*********************************** Ruta raiz **********************************************************/
 Route::get('login', function()
 {
-
 	return View::make('inicio');
 });
 
+Route::post('product/new', array('uses' => 'ProductoController@newProduct' /*, 'before' => 'secure'*/));
+Route::post('product/edit', array('uses' => 'ProductoController@editProduct'/*, 'before' => 'secure'*/));
+Route::post('product/delete', array('uses' => 'ProductoController@deleteProduct'/*, 'before' => 'secure'*/));
+Route::post('product/info', array('uses' => 'ProductoController@showInfo'/*, 'before' => 'secure'*/));
+Route::get('product/products', array('uses' => 'ProductoController@showProduct'/*, 'before' => 'secure'*/));
+
 Route::get('inicioProductos', function()
 {
-
 	return View::make('iniProduc');
 });
 Route::get('verProductos', function()
 {
-
 	return View::make('verProduc');
 });
 Route::get('modificarProductos', function()
 {
-
 	return View::make('modProduc');
 });
+
 ?>

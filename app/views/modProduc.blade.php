@@ -28,6 +28,41 @@
 	</form>
 @stop
 
+@section('code')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var info = JSON.parse(localStorage.getItem("user-edit"));
+			if(info != undefined && info){
+				$("#cod").val(info.id);
+				$("#name").val(info.nombre);
+				$("#desc").val(info.descripcion);
+				$("#price").val(info.precio);
+
+				$("#Enviar").click(function(){
+					var producto = {
+						nombre: $("#name").val(),
+						descripcion: $("#desc").val(),
+						precio: $("#price").val(),
+						id: $("#cod").val()
+					}
+					$.ajax({
+						url: 'product/edit',
+						type: 'post',
+						data: producto,
+						success: function(response){
+							if(response.status == "ok") alert(response.message)
+							else if(response.status == "error") alert(response.message)
+							localStorage.removeItem('user-edit');
+							window.location.href = 'modificarProductos';
+						}
+					});
+				})
+
+			}else location.href = 'verProductos';
+		});
+	</script>
+@stop
+
 @section('footer')
 	@parent
 @stop

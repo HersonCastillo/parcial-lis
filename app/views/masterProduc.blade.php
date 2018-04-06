@@ -43,9 +43,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="verProductos">Mostrar</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="modificarProductos">Actualizar</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -111,6 +108,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    @yield('code')
   </body>
 
 </html>
