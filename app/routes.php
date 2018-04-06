@@ -16,9 +16,26 @@ Route::get('login', function()
 	return View::make('inicio');
 });
 
+<<<<<<< HEAD
 Route::post('product/new', array('uses' => 'ProductoController@newProduct', 'before' => 'secure'));
 Route::post('product/edit/{$id}', array('uses' => 'ProductoController@editProduct', 'before' => 'secure'));
 Route::post('product/delete/{$id}', array('uses' => 'ProductoController@deleteProduct', 'before' => 'secure'));
 Route::post('product/products', array('uses' => 'ProductoController@showProduct', 'before' => 'secure'));
+=======
+Route::get('inicioProductos', function()
+{
 
+	return View::make('iniProduc');
+});
+Route::get('verProductos', function()
+{
+>>>>>>> 18c8e54419ca169d2e544bbd5e6e20a20ecff231
+
+	return View::make('verProduc');
+});
+Route::get('modificarProductos', function()
+{
+
+	return View::make('modProduc');
+});
 ?>
