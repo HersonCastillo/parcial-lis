@@ -16,11 +16,10 @@ Route::get('login', function()
 	return View::make('inicio');
 });
 
-
 Route::post('product/new', array('uses' => 'ProductoController@newProduct' /*, 'before' => 'secure'*/));
 Route::post('product/edit/{$id}', array('uses' => 'ProductoController@editProduct'/*, 'before' => 'secure'*/));
-Route::post('product/delete/{$id}', array('uses' => 'ProductoController@deleteProduct'/*, 'before' => 'secure'*/));
-Route::post('product/products', array('uses' => 'ProductoController@showProduct'/*, 'before' => 'secure'*/));
+Route::post('product/delete', array('uses' => 'ProductoController@deleteProduct'/*, 'before' => 'secure'*/));
+Route::get('product/products', array('uses' => 'ProductoController@showProduct'/*, 'before' => 'secure'*/));
 
 Route::get('inicioProductos', function()
 {

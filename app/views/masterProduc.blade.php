@@ -111,6 +111,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    @yield('code')
   </body>
 
 </html>

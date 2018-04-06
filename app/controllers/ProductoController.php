@@ -35,9 +35,11 @@
                 return $this->response("error", "Ocurrió un error: ".$ex->getMessage());
             }
         }
-        public function deleteProduct($id){
+        public function deleteProduct(){
             try{
-                $Producto = Producto::find($id);
+                $Id = Input::get('id');
+
+                $Producto = Producto::find($Id);
                 $Producto->delete();
                 return $this->response("ok", "Producto eliminado con éxito.");
             }catch(Exception $ex){
@@ -45,7 +47,7 @@
             }
         }
         public function showProduct(){
-            return Product::all();
+            return Producto::all();
         }
         private function response($status, $message){
             return array("status" => $status, "message" => $message);
