@@ -43,9 +43,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="verProductos">Mostrar</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="modificarProductos">Actualizar</a>
-            </li>
           </ul>
         </div>
       </div>

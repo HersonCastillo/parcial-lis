@@ -33,7 +33,17 @@
 			}});
 		})
 		var modificar = function(id){
-			
+			$.ajax({
+				url: 'product/info',
+				type: 'post',
+				data: {id:id},
+				success: function(response){
+					if(!response.error){
+						localStorage.setItem("user-edit", JSON.stringify(response));
+						window.location.href = 'modificarProductos';
+					}
+				}
+			});
 		}
 		var eliminar = function(id){
 			if(confirm('¿Eliminar este elemento?')){

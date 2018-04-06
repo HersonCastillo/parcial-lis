@@ -18,13 +18,24 @@
                 return $this->response("error", "Ocurrió un error: ".$ex->getMessage());
             }
         }
-        public function editProduct($id){
+        public function showInfo(){
             try{
+                $Id = Input::get('id');
+                $Producto = Producto::find($Id);
+                return $Producto;
+            }catch(Exception $ex){
+                return $this->response("error", "Usuario no encontrado.");
+            }
+        }
+        public function editProduct(){
+            try{
+                $Id = Input::get('id');
+
                 $Nombre = Input::get('nombre');
                 $Descripcion = Input::get('descripcion');
                 $Precio = Input::get('precio');
 
-                $Producto = Producto::find($id);
+                $Producto = Producto::find($Id);
                 $Producto->nombre = $Nombre;
                 $Producto->descripcion = $Descripcion;
                 $Producto->precio = $Precio;

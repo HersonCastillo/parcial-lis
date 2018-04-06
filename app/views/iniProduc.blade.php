@@ -43,6 +43,7 @@
 				}, type: 'post', success: function(response){
 					if(response.status == "ok") alert(response.message)
 					else if(response.status == "error") alert(response.message)
+					window.location.reload()
 				}})
 			})
 		})
