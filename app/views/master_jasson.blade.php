@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
 
@@ -8,10 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Examen LIS</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -22,15 +22,14 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
-
   </head>
 
   <body id="page-top">
-    @section('menu')
+@section('menu')
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: #1782FD;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#111111">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="color: white;">EXAMEN LIS</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Examen LIS</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -38,24 +37,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="inicioProductos">Ingreso</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="verProductos">Mostrar</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     @show
-    <!-- Contenedor -->
+    
+    
     <section id="services">
       <div class="container">
         @yield('contenedor')
       </div>
     </section>
-    @section('footer')
+    
+
     <!-- Footer -->
+    @section('footer')
     <footer>
       <div class="container">
         <div class="row">
@@ -95,6 +94,7 @@
       </div>
     </footer>
     @show
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -108,7 +108,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-    @yield('code')
+
   </body>
 
 </html>
