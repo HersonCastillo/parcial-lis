@@ -11,12 +11,8 @@
 |
 */
 /*********************************** Ruta raiz **********************************************************/
-Route::get('home', function()
+Route::get('login', function()
 {
-
 	return View::make('inicio');
 });
-
-Route::post('calcular', array('uses' => 'CalculoController@calcular'));
-
 ?>
